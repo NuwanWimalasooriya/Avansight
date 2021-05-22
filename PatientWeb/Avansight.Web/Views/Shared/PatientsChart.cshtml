@@ -1,0 +1,23 @@
+﻿@model Avansight.Web.Models.PatientChart
+@{
+    ViewData["Title"] = "Charts of Readings";
+}
+
+<div style="margin-top:5%">
+    <h1>Charts of Readings</h1>
+
+    <form id="treatmentChart" role="form" class="form-horizontal" style="margin-top:5%">
+        <div class="row">
+
+            <div class="col-md-4">
+                <button id="loadAllTreatments" class="btn btn-primary float-md-">All Patients</button>
+            </div>
+            <div class="col-md-4">
+                <button id="loadTreatments" class="btn btn-primary float-md-">Single Patients</button>
+            </div>
+        </div>
+    </form>
+
+    <div id="readingsDiv" class="col-md-6"></div>
+
+</div>

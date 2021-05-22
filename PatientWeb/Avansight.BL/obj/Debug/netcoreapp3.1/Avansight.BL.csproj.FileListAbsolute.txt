@@ -1,0 +1,12 @@
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\bin\Debug\netcoreapp3.1\Avansight.BL.deps.json
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\bin\Debug\netcoreapp3.1\Avansight.BL.dll
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\bin\Debug\netcoreapp3.1\Avansight.BL.pdb
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\bin\Debug\netcoreapp3.1\Avansight.Domain.dll
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\bin\Debug\netcoreapp3.1\Avansight.Domain.pdb
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\obj\Debug\netcoreapp3.1\Avansight.BL.csprojAssemblyReference.cache
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\obj\Debug\netcoreapp3.1\Avansight.BL.AssemblyInfoInputs.cache
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\obj\Debug\netcoreapp3.1\Avansight.BL.AssemblyInfo.cs
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\obj\Debug\netcoreapp3.1\Avansight.BL.csproj.CoreCompileInputs.cache
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\obj\Debug\netcoreapp3.1\Avansight.BL.csproj.CopyComplete
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\obj\Debug\netcoreapp3.1\Avansight.BL.dll
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.BL\obj\Debug\netcoreapp3.1\Avansight.BL.pdb
