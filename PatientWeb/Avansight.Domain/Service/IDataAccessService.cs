@@ -7,7 +7,7 @@ namespace Avansight.Domain.Service
 {
     public interface IDataAccessService
     {
-        int InsertPatients(List<Patient> patients);
+        List<int> InsertPatients(List<Patient> patients);
 
         List<Patient> GetPatients();
 

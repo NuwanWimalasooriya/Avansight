@@ -185,6 +185,19 @@
           }
         }
       },
+      "Avansight.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Avansight.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Avansight.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Avansight.BL.dll": {}
+        }
+      },
       "Avansight.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -649,6 +662,11 @@
         "version.txt"
       ]
     },
+    "Avansight.BL/1.0.0": {
+      "type": "project",
+      "path": "../Avansight.BL/Avansight.BL.csproj",
+      "msbuildProject": "../Avansight.BL/Avansight.BL.csproj"
+    },
     "Avansight.Domain/1.0.0": {
       "type": "project",
       "path": "../Avansight.Domain/Avansight.Domain.csproj",
@@ -657,6 +675,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Avansight.BL >= 1.0.0",
       "Avansight.Domain >= 1.0.0"
     ]
   },
@@ -667,11 +686,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight\\Avansight.Web.csproj",
+      "projectUniqueName": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Web\\Avansight.Web.csproj",
       "projectName": "Avansight.Web",
-      "projectPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight\\Avansight.Web.csproj",
+      "projectPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Web\\Avansight.Web.csproj",
       "packagesPath": "C:\\Users\\Nuwan\\.nuget\\packages\\",
-      "outputPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight\\obj\\",
+      "outputPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -691,8 +710,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight.Domain\\Avansight.Domain.csproj": {
-              "projectPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight.Domain\\Avansight.Domain.csproj"
+            "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.BL\\Avansight.BL.csproj": {
+              "projectPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.BL\\Avansight.BL.csproj"
+            },
+            "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Domain\\Avansight.Domain.csproj": {
+              "projectPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Domain\\Avansight.Domain.csproj"
             }
           }
         }

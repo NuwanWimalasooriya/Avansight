@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight.Domain\\Avansight.Domain.csproj": {}
+    "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Domain\\Avansight.Domain.csproj": {}
   },
   "projects": {
-    "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight.Domain\\Avansight.Domain.csproj": {
+    "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Domain\\Avansight.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight.Domain\\Avansight.Domain.csproj",
+        "projectUniqueName": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Domain\\Avansight.Domain.csproj",
         "projectName": "Avansight.Domain",
-        "projectPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight.Domain\\Avansight.Domain.csproj",
+        "projectPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Domain\\Avansight.Domain.csproj",
         "packagesPath": "C:\\Users\\Nuwan\\.nuget\\packages\\",
-        "outputPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\PatientWeb\\Avansight\\Avansight.Domain\\obj\\",
+        "outputPath": "E:\\Nuwan\\PatientSystem\\Nuwan_Assignment\\Avansight\\Avansight\\PatientWeb\\Avansight.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

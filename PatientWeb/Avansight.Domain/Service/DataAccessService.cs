@@ -21,9 +21,9 @@ namespace Avansight.Domain.Service
             Configuration = _configuration;
             ConnectionString = Configuration.GetConnectionString("PatientDB");
         }
-        public int InsertPatients(List<Patient> patients)
+        public List<int> InsertPatients(List<Patient> patients)
         {
-            int rowAffected = 0;
+            List<int> patientIDs = new List<int>();
             using (IDbConnection connection = new SqlConnection(ConnectionString))
             {
                 if (connection.State == ConnectionState.Closed)
@@ -32,12 +32,15 @@ namespace Avansight.Domain.Service
                 var parameters = new DynamicParameters();
                 parameters.AddTable("@Patients", "PatientTableType", patients);
 
+                var results = connection.Query("PatientSet", parameters, commandType: CommandType.StoredProcedure).ToList();
 
-                rowAffected = connection.Execute("PatientSet", parameters, commandType: CommandType.StoredProcedure);
-
+               foreach(var row in results)
+                {
+                    patientIDs.Add(row.PatientId);
+                }
             }
 
-            return rowAffected;
+            return patientIDs;
 
         }
 

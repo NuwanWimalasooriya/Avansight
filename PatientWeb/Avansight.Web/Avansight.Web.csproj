@@ -5,10 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Patient\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Avansight.BL\Avansight.BL.csproj" />
     <ProjectReference Include="..\Avansight.Domain\Avansight.Domain.csproj" />
   </ItemGroup>
 

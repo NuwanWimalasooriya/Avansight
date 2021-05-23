@@ -1,3 +1,4 @@
+using Avansight.BL;
 using Avansight.Domain.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,10 +24,10 @@ namespace Avansight
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddTransient<IPatientService, PatientService>();
-            services.AddTransient<IDataAccessService, DataAccessService>();
             services.AddControllersWithViews();
+           // services.AddTransient<IPatientService, PatientService>();
+            services.AddTransient<IDataAccessService, DataAccessService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

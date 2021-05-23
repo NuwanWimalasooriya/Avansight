@@ -1,0 +1,9 @@
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\bin\Debug\netcoreapp3.1\Avansight.Domain.deps.json
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\bin\Debug\netcoreapp3.1\Avansight.Domain.dll
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\bin\Debug\netcoreapp3.1\Avansight.Domain.pdb
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\obj\Debug\netcoreapp3.1\Avansight.Domain.AssemblyInfoInputs.cache
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\obj\Debug\netcoreapp3.1\Avansight.Domain.AssemblyInfo.cs
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\obj\Debug\netcoreapp3.1\Avansight.Domain.csproj.CoreCompileInputs.cache
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\obj\Debug\netcoreapp3.1\Avansight.Domain.dll
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\obj\Debug\netcoreapp3.1\Avansight.Domain.pdb
+E:\Nuwan\PatientSystem\Nuwan_Assignment\Avansight\Avansight\PatientWeb\Avansight.Domain\obj\Debug\netcoreapp3.1\Avansight.Domain.csprojAssemblyReference.cache
