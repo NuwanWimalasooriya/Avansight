@@ -1,0 +1,39 @@
+﻿@model Avansight.Web.Models.PatientViewModel
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/domo-phoenix/build/global/domoPhoenix.js"></script>
+<script src="~/lib/domo-phoenix/build/global/domoPhoenix.min.js"></script>
+<script src="~/lib/domo-phoenix/build/global/domoPhoenixWithMaps.js"></script>
+<script src="~/lib/domo-phoenix/build/global/domoPhoenixWithMaps.min.js"></script>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Patients Dashboard</h2>
+
+
+<div>
+
+    
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#first" aria-controls="first" role="tab" data-toggle="tab"> <b> Simulate Patients&nbsp;&nbsp;</b>  </a>
+        </li>
+        <li role="presentation">
+            <a href="#second" aria-controls="second" role="tab" data-toggle="tab"> <b>&nbsp;&nbsp;  Charts of Patients</b></a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="first">
+            <partial name="SimulatePatients" model="Model.SimulatePatientVM" />
+        </div>
+        <div role="tabpanel" class="tab-pane" id="second">
+            <partial name="PatientsChart" model="Model.PatientChart" />
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+﻿@page
+@model Avansight.Web.Models.SimulatePatientVM
+@{
+    <form id="patient" role="form" class="form-horizontal" style="margin-top:5%">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="error" style="display:none">
+            Please fill all the form details!
+
+        </div>
+
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="errorPCount" style="display:none">
+            Sample size should be minimum 10.
+
+        </div>
+        <div class="alert alert-success" role="alert" id="success" style="display:none">
+            Patients generated successfully!
+        </div>
+        <div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group input-medium">
+                    <label class="control-label" for="inputSuccess">Sample Size</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group input-medium">
+                    <input class="form-control" type="number" id="sampleSize" />
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-2">
+                <label class="col-md-2 control-label" for="inputSuccess">Gender</label>
+            </div>
+            <div class="col-md-4">
+                <table>
+                    <tr><td><b>  Male (Weight) </b></td></tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="number" id="maleWeight" />
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-6">
+                <table>
+                    <tr><td><b> Female (Weight)</b></td></tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="number" id="femaleWeight" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group input-medium">
+                    <label class="control-label" for="inputSuccess">Age Group</label>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <table>
+                    <tr><td><b>  (21-30) </b></td></tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="number" id="age2030" />
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-2">
+                <table>
+                    <tr><td><b>  (31-40) </b></td></tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="number" id="age3040" />
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-2">
+                <table>
+                    <tr><td><b>  (41-50) </b></td></tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="number" id="age4050" />
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-2">
+                <table>
+                    <tr><td><b>  (51-60) </b></td></tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="number" id="age5060" />
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-2">
+                <table>
+                    <tr><td><b>  (61-70) </b></td></tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" type="number" id="age6070" />
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group input-medium">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button id="submitPatients" class="btn btn-primary float-md-">Generate Patients</button>
+            </div>
+        </div>
+
+    </form>
+
+
+    <script src="~/js/patient.js"></script>
+
+}
