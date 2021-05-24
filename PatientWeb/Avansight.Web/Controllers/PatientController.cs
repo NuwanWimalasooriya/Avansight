@@ -38,37 +38,51 @@ namespace Avansight.Web.Controllers
         public IActionResult CreatePatients(SimulatePatientVM simulatePatientVM)
         {
             var patientList = PatientGenerateService.GeneratePatintList(simulatePatientVM);
-            var patientIdList = _patientService.InsertPatients(patientList);
-            HttpContext.Session.SetComplexData("patientIdList", patientIdList);
-            return Ok(patientIdList.Count);
+            //var patientIdList = _patientService.InsertPatients(patientList);
+           // HttpContext.Session.SetComplexData("patientIdList", patientIdList);
+            HttpContext.Session.SetComplexData("patientList", patientList);
+            return Ok(patientList.Count);
         }
 
 
 
         public IActionResult GetPatients()
         {
-            var patient = _patientService.GetPatients();
-            var patientFormatted = patient.GroupBy(g => new { g.Age, g.Gender }).Select(s => new { s.Key.Age, s.Key.Gender, PatientCount = s.Count() });
+           // var patient = _patientService.GetPatients();
+            var patient = HttpContext.Session.GetComplexData<List<Patient>>("patientList");
+            if (patient != null)
+            {
+                var patientFormatted = patient.GroupBy(g => new { g.Age, g.Gender }).Select(s => new { s.Key.Age, s.Key.Gender, PatientCount = s.Count() });
 
-            var arrayOfPatients = patientFormatted.ToList().Select(s =>
-                        new ArrayList() { s.Gender, s.Age, s.PatientCount }
-                        );
+                var arrayOfPatients = patientFormatted.ToList().Select(s =>
+                            new ArrayList() { s.Gender, s.Age, s.PatientCount }
+                            );
 
             return Ok(arrayOfPatients);
+            }
+            return Ok(new ArrayList());
         }
 
         [HttpPost]
         public IActionResult CreateTreatmentReadings()
         {
-            var patientIdList = HttpContext.Session.GetComplexData<List<int>>("patientIdList");
+           // var patientIdList = HttpContext.Session.GetComplexData<List<int>>("patientIdList");
+            var patientList = HttpContext.Session.GetComplexData<List<Patient>>("patientList");
             var readingRecords = new List<TreatmentReading>();
             var affectedReadings = 0;
 
-            if (patientIdList != null)
+            //if (patientIdList != null)
+            //{
+            //    var readingList = PatientGenerateService.GenerateReadingRecords(patientIdList);
+            //    // affectedReadings = _patientService.InsertTreatmentReadings(readingList);
+            //     affectedReadings = _patientService.UpdateTreatmentReadings(readingList, patientIdList);
+            //}
+
+            if (patientList != null)
             {
-                var readingList = PatientGenerateService.GenerateReadingRecords(patientIdList);
+                var readingList = new List<TreatmentReading>();//PatientGenerateService.GenerateReadingRecords(patientList);
                 // affectedReadings = _patientService.InsertTreatmentReadings(readingList);
-                 affectedReadings = _patientService.UpdateTreatmentReadings(readingList, patientIdList);
+                affectedReadings = _patientService.UpdateTreatmentReadings(readingList, patientList);
             }
 
             return Ok(affectedReadings);

@@ -15,6 +15,6 @@ namespace Avansight.Domain.Service
 
         List<TreatmentReading> GetTreatmentReadings();
 
-        int UpdateTreatmentReadings(List<TreatmentReading> readings, List<int> patientIds);
+        int UpdateTreatmentReadings(List<TreatmentReading> readings, List<Patient> patients);
     }
 }

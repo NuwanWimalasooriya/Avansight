@@ -93,7 +93,7 @@ GO
 
 /****** Object:  UserDefinedTableType [dbo].[TreatmentReadingTableType]    Script Date: 05/22/2021 13:46:14 ******/
 CREATE TYPE [dbo].[TreatmentReadingTableType] AS TABLE(
-	[VisitWeek] [int] NOT NULL,
+	[VisitWeek] varchar(10) NULL,
 	[Reading] [decimal](10, 2) NULL,
 	[PatientId] [int] NULL
 )
@@ -189,12 +189,13 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
-CREATE PROCEDURE [dbo].[TreatmentReadingSet]  @TreatmentReadings AS TreatmentReadingTableType READONLY
+create PROCEDURE [dbo].[TreatmentReadingSet]  @TreatmentReadings AS TreatmentReadingTableType READONLY
 AS
 
-INSERT INTO dbo.TreatmentReading(VisitWeek,Reading,PatientId)
+INSERT INTO dbo.TreatmentReading(PatientId, VisitWeek,Reading)
 
 SELECT tr.PatientId,tr.VisitWeek, tr.Reading FROM @TreatmentReadings tr;
+
 
 
 GO

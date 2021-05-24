@@ -43,13 +43,13 @@ namespace Avansight.Web.PatientService
 
         }
 
-        public static List<TreatmentReading> GenerateReadingRecords(List<int> patientIdList)
+        public static List<TreatmentReading> GenerateReadingRecords(List<Patient> patientList)
         {
             var readingList = new List<TreatmentReading>();
             Random rand = new Random();
             string[] visitWeekData = { "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", };
           
-            foreach (int id in patientIdList)
+            foreach (var patient in patientList)
             {
                 int index = rand.Next(1, visitWeekData.Length);
 
@@ -62,7 +62,7 @@ namespace Avansight.Web.PatientService
 
                     var reading = new TreatmentReading()
                     {
-                        PatientId = id,
+                        PatientId = 0,
                         Reading = Convert.ToDecimal(randomDec.ToString("#.####")),
                         VisitWeek = value
                     };

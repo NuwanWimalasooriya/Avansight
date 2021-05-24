@@ -34,9 +34,9 @@ namespace Avansight.BL
             return _dataAccessService.GetTreatmentReadings();
         }
 
-        public int UpdateTreatmentReadings(List<TreatmentReading> readings, List<int> patientIds)
+        public int UpdateTreatmentReadings(List<TreatmentReading> readings, List<Patient> patients)
         {
-          return  _dataAccessService.UpdateTreatmentReadings(readings, patientIds);
+          return  _dataAccessService.UpdateTreatmentReadings(readings, patients);
         }
 
     }

@@ -112,10 +112,10 @@ namespace Avansight.Domain.Service
 
         }
 
-        public int UpdateTreatmentReadings(List<TreatmentReading> readings, List<int> patientIds)
+        public int UpdateTreatmentReadings(List<TreatmentReading> readings, List<Patient> patients)
         {
             var rowsAffected = 0;
-           
+            readings = new List<TreatmentReading>();
             using (var conn = new SqlConnection(ConnectionString))
             {
                 conn.Open();
@@ -123,11 +123,16 @@ namespace Avansight.Domain.Service
                 using (SqlTransaction tran = conn.BeginTransaction())
                 {
                     try
-                    {
-                      int minPatientId  =patientIds.Min(a => a);
+                    { 
+                         var patientIdList=   InsertPatients(patients);
+                        int minPatientId = patientIdList.Min(a => a);
                         DeletePatientAndTreatments(minPatientId);
-                        rowsAffected= InsertTreatmentReadings(readings);
-                        tran.Commit();
+                        foreach (var pId in patientIdList)
+                        {
+                            readings= GenerateTreatments(pId);
+                            rowsAffected = InsertTreatmentReadings(readings);
+                        }
+                            tran.Commit();
                     }
                     catch (Exception ex)
                     {
@@ -139,6 +144,34 @@ namespace Avansight.Domain.Service
             }
 
             return rowsAffected;
+        }
+
+        private List<TreatmentReading> GenerateTreatments(int patientId)
+        {
+            var readingList = new List<TreatmentReading>();
+            Random rand = new Random();
+            string[] visitWeekData = { "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10", };
+
+                int index = rand.Next(1, visitWeekData.Length);
+
+                var newRandomvisitWeekData = visitWeekData.SubArray(0, index);
+                foreach (var value in newRandomvisitWeekData)
+                {
+                    int randomInt = rand.Next(0, 10);
+                    double randomDouble = rand.Next(0, 999999999);
+                    decimal randomDec = Convert.ToDecimal(randomInt) + Convert.ToDecimal((randomDouble / 1000000000));
+
+                    var reading = new TreatmentReading()
+                    {
+                        PatientId = patientId,
+                        Reading = Convert.ToDecimal(randomDec.ToString("#.####")),
+                        VisitWeek = value
+                    };
+
+                    readingList.Add(reading);
+                }
+
+            return readingList;
         }
 
 
